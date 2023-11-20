@@ -51,3 +51,16 @@ function containsX(string) {
 ```
 realiza la busqueda del caracter 'X' en una cadena,hay una variable booleana `foundX` inicializada en `false` porque no ha encontrado aun el caracter, entonces para buscar basta con realizar un recorrido lineal en el arreglo
 hasta ver si la encuentra, si encuentra la 'X', entonces la variable `foundX` se cambia a `true`. Finalmente se retorna el valor de `foundX` si al final se encuentra la 'X'.Por lo tanto el algoritmo tiene una complejidad en términos de notacion big O`O(n)`.
+
+Usamos la extension `Code Runner` de `Visual Studio Code` y realizamos pruebas en cuatro cadenas.
+
+![](https://github.com/GaboYR/javascript/blob/main/images/containX_original.png)
+
+
+Para mejorar el algoritmo podemos usar la técnica de doble puntero,es decir, usar 2 variables `i` y `j` una que empieze en el comienzo del arreglo, y la otra empezaría al final del arreglo, el algoritmo se ejecuta hasta que se cumpla una de las siguientes condiciones:
+- Que una de las variables encuentre el caracter 'X'.
+- Que `i <= j`.
+
+Codigo modificado:
+```js
+```
