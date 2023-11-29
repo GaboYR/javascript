@@ -84,4 +84,17 @@ Para mejorar el algoritmo podemos usar la técnica de doble puntero,es decir, us
 
 Codigo modificado:
 ```js
+//Algoritmo modificado
+function containsXMejorado(string){
+    let i = 0,j = string.length;
+    let foundX = false;
+    while (i <= j && !foundX) {
+        if (string[i] == 'X' || string[j] == 'X'){
+            foundX = true;
+        }
+        i ++;
+        j --;
+    }
+    return foundX;
+}
 ```
