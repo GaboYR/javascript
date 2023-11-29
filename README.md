@@ -98,3 +98,4 @@ function containsXMejorado(string){
     return foundX;
 }
 ```
+Este algoritmo es de complejidad O(n), pero realiza una busqueda de extremos a medio, por lo que puede acortar el tiempo de ejecucion.
