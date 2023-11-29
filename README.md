@@ -2,12 +2,33 @@
 ## Parte 1(preguntas):
 1. En JavaScript, todas las operaciones de red son asíncronas. ¿Porque es esto importante?
    
-2. En Javascript, queremos realizar acciones tras una operación/solicitud de red completa. ¿Qué paradigma de programación hace esto posible?
+   Cuando estamos trabajando a nivel de red, las operaciones no se dan a la vez(síncronia), por ejemplo, una solicitud HTTP requiere que se realize una petición al servidor y este responde después de la operación(paradigma cliente-servidor).
+   Además, es conveniente tener operaciones asíncronas si es que las solicitudes HTTP son concurrentes, en JavaScript existe el concepto de callback, una funcion que se ejecuta al completar las tareas de una operación asíncrona.
    
-3. ¿Javascript proporciona soporte limitado para la herencia a través de qué mecanismo?
+3. En Javascript, queremos realizar acciones tras una operación/solicitud de red completa. ¿Qué paradigma de programación hace esto posible?
+El paradigma que permite lo enunciado en la pregunta es el paradigma de la programacion asíncrona, esta permite que un programe no se cierre y deje que se realizen ciertas funciones en segundo plano.
    
-4. ¿Qué es el DOM? ¿Qué librería nos ayuda a usar Javascript para manipular el DOM?
-   El DOM significa **Document,Object and Model**, y trabaja como forma de arbol 
+   
+5. ¿Javascript proporciona soporte limitado para la herencia a través de qué mecanismo?
+En javascript no contamos directamente con una estructura llamada `clase`, sin embargo, tenemos dos opciones; la primera es, podemos usar `prototype` para realizar herencia, aquí un ejemplo:
+```js
+function Padre(nombre) {
+   this.nombre = nombre;
+}
+// Agregamos un metodo al prototipo Padre
+Padre.prototype.saludar = function() {
+  console.log(`Hola, soy ${this.nombre}`);
+};
+var Hijo = new Padre('Maria');
+Hijo.saludar();
+// En consola veremos el mensaje: 
+// Hola, soy Maria
+```
+   
+   
+7. ¿Qué es el DOM? ¿Qué librería nos ayuda a usar Javascript para manipular el DOM?
+   
+   El DOM significa **Document,Object and Model**, y trabaja como forma de arbol .El DOM representa la estructura del documento como un árbol de objetos donde cada nodo es un objeto que representa parte del documento, como elementos HTML, atributos, y texto.
 
 ## Parte 2(verificacion de booleanos)
 En codigo verificamos los valores de cada igualdad.
